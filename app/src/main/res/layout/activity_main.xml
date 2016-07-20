@@ -10,10 +10,10 @@
     tools:context="com.altamirasoft.spring_sample.MainActivity">
 
     <View
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/object"
-        android:background="#ff0000"
+        android:background="@drawable/circle"
         android:layout_centerInParent="true"
      />
 </RelativeLayout>
