@@ -12,6 +12,8 @@ import com.altamirasoft.spring.SpringAnimatorSet;
 public class MainActivity extends AppCompatActivity {
 
 
+
+
     View object;
 
     @Override
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
                 int action = motionEvent.getActionMasked();
                 if(action==MotionEvent.ACTION_DOWN){
                     Log.d("log","value = ACTION_DOWN");
+
+
                     SpringAnimator.ofFloat(object,"scale",1f,0.5f).setTensionFriction(400,20).start();
 
                     return true;
@@ -36,9 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 else if(action==MotionEvent.ACTION_UP){
                     Log.d("log","value = ACTION_UP");
                     //with animator set
-                    SpringAnimator animX = SpringAnimator.ofFloat(object,"scaleX",1f);
-                    SpringAnimator animY = SpringAnimator.ofFloat(object,"scaleY",1f);
 
+
+
+                    SpringAnimator animX = SpringAnimator.ofFloat(object,"scaleX",1f);
 
                     animX.addUpdateListener(new SpringAnimator.AnimatorUpdateListener() {
                         @Override
@@ -49,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
                         }
                     });
+
+
 
                     animX.addListener(new SpringAnimator.AnimatorListener() {
                         @Override
@@ -72,8 +79,19 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
 
+
+                    SpringAnimator animY = SpringAnimator.ofFloat(object,"scaleY",1f);
+
+
+
+
+
+
                     SpringAnimatorSet set = SpringAnimatorSet.createAnimationSet(animX,animY);
                     set.start();
+
+
+
                     return true;
                 }
 
