@@ -9,7 +9,7 @@ It uses [Rebound library](http://facebook.github.io/rebound/) from facebook(It i
 ## Setup
 Add the following to your build.gradle:
 ```
-compile 'com.altamirasoft.spring:spring:0.1.2'
+compile 'com.altamirasoft.spring:spring:0.1.6'
 ```
 
 or 
